@@ -786,7 +786,7 @@ class HtmlOldParser extends StatelessWidget {
         case "table":
           double border = 0;
           if (node.attributes['border'] != null) {
-            border = node.attributes['border'];
+            border = node.attributes['border'] as double;
           }
           return Container(
             decoration: BoxDecoration(border: Border.all(width: border)),
