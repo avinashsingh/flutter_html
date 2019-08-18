@@ -784,9 +784,16 @@ class HtmlOldParser extends StatelessWidget {
             );
           });
         case "table":
-          return Column(
-            children: _parseNodeList(node.nodes),
-            crossAxisAlignment: CrossAxisAlignment.start,
+          int border = 0;
+          if (node.attributes['border'] != null) {
+            border = node.attributes['border'];
+          }
+          return Container(
+            decoration: BoxDecoration(border: Border.all(width: border)),
+            child: Column(
+              children: _parseNodeList(node.nodes),
+              crossAxisAlignment: CrossAxisAlignment.start,
+            )
           );
         case "tbody":
           return Column(
@@ -795,14 +802,21 @@ class HtmlOldParser extends StatelessWidget {
           );
         case "td":
           int colspan = 1;
+          int border = 0;
           if (node.attributes['colspan'] != null) {
             colspan = int.tryParse(node.attributes['colspan']);
           }
+          if (node.parent.parent.attributes['border'] != null || node.parent.parent.parent.attributes['border'] != null ) {
+            border = node.parent.parent.attributes['border']?? node.parent.parent.parent.attributes['border'];
+          }
           return Expanded(
             flex: colspan,
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: _parseNodeList(node.nodes),
+            child: Container(
+              decoration: BoxDecoration(border: Border.all(width: border)),
+              child: Wrap(
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: _parseNodeList(node.nodes),
+              )
             ),
           );
         case "template":
