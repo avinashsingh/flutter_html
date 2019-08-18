@@ -626,7 +626,12 @@ class HtmlRichTextParser extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[],
             );
+            double border = 0;
+            if (node.attributes['border'] != null) {
+              border = node.attributes['border'] as double;
+            }
             nextContext.rootWidgetList.add(Container(
+                decoration: BoxDecoration(border: Border.all(width: border)),
                 margin: EdgeInsets.symmetric(vertical: 12.0),
                 child: nextContext.parentElement));
             break;
@@ -640,8 +645,12 @@ class HtmlRichTextParser extends StatelessWidget {
           case "td":
           case "th":
             int colspan = 1;
+            double border = 0;
             if (node.attributes['colspan'] != null) {
               colspan = int.tryParse(node.attributes['colspan']);
+            }
+            if (node.parent.parent.attributes['border'] != null || node.parent.parent.parent.attributes['border'] != null ) {
+              border = (node.parent.parent.attributes['border']?? node.parent.parent.parent.attributes['border']) as double;
             }
             nextContext.childStyle = nextContext.childStyle.merge(TextStyle(
                 fontWeight: (node.localName == 'th')
@@ -651,7 +660,7 @@ class HtmlRichTextParser extends StatelessWidget {
                 RichText(text: TextSpan(text: '', children: <TextSpan>[]));
             Expanded cell = Expanded(
               flex: colspan,
-              child: Container(padding: EdgeInsets.all(1.0), child: text),
+              child: Container(decoration: BoxDecoration(border: Border.all(width: border)), padding: EdgeInsets.all(1.0), child: text),
             );
             nextContext.parentElement.children.add(cell);
             nextContext.parentElement = text.text;
