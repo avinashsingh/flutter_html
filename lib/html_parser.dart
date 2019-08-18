@@ -784,7 +784,7 @@ class HtmlOldParser extends StatelessWidget {
             );
           });
         case "table":
-          int border = 0;
+          double border = 0;
           if (node.attributes['border'] != null) {
             border = node.attributes['border'];
           }
@@ -802,7 +802,7 @@ class HtmlOldParser extends StatelessWidget {
           );
         case "td":
           int colspan = 1;
-          int border = 0;
+          double border = 0;
           if (node.attributes['colspan'] != null) {
             colspan = int.tryParse(node.attributes['colspan']);
           }
