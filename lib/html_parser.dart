@@ -807,7 +807,7 @@ class HtmlOldParser extends StatelessWidget {
             colspan = int.tryParse(node.attributes['colspan']);
           }
           if (node.parent.parent.attributes['border'] != null || node.parent.parent.parent.attributes['border'] != null ) {
-            border = node.parent.parent.attributes['border']?? node.parent.parent.parent.attributes['border'];
+            border = (node.parent.parent.attributes['border']?? node.parent.parent.parent.attributes['border']) as double;
           }
           return Expanded(
             flex: colspan,
