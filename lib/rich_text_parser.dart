@@ -20,6 +20,10 @@ typedef OnImageTap = void Function(String source);
 const OFFSET_TAGS_FONT_SIZE_FACTOR =
     0.7; //The ratio of the parent font for each of the offset tags: sup or sub
 
+const subsupcode = {    ' ': [' ', ' '], '0': ['\u2070', '\u2080'],    '1': ['\u00B9', '\u2081'],    '2': ['\u00B2', '\u2082'],    '3': ['\u00B3', '\u2083'],    '4': ['\u2074', '\u2084'],    '5': ['\u2075', '\u2085'],    '6': ['\u2076', '\u2086'],    '7': ['\u2077', '\u2087'],    '8': ['\u2078', '\u2088'],    '9': ['\u2079', '\u2089'],    'a': ['\u1d43', '\u2090'],    'b': ['\u1d47', '\u2086'],    'c': ['\u1d9c', '\ua700'],    'd': ['\u1d48', '\u2094'],    'e': ['\u1d49', '\u2091'],    'f': ['\u1da0', '\u0532'],    'g': ['\u1d4d', '\u2089'],    'h': ['\u02b0', '\u2095'],    'i': ['\u2071', '\u1d62'],    'j': ['\u02b2', '\u2c7c'],    'k': ['\u1d4f', '\u2096'],    'l': ['\u02e1', '\u2097'],    'm': ['\u1d50', '\u2098'],    'n': ['\u207f', '\u2099'],    'o': ['\u1d52', '\u2092'],    'p': ['\u1d56', '\u209a'],    'q': ['?', '?'],    'r': ['\u02b3', '\u1d63'],    's': ['\u02e2', '\u209b'],    't': ['\u1d57', '\u209c'],    'u': ['\u1d58', '\u1d64'],    'v': ['\u1d5b', '\u1d65'],    'w': ['\u02b7', '\u1d65\u1d65'],    'x': ['\u02e3', '\u2093'],    'y': ['\u02b8', '\u1d67'],    'z': ['\u1dbb', '\u2082'],    'A': ['\u1d2c', '\2090'],    'B': ['\u1d2e', '\u2088'],    'C': ['\u1d9c', '\ua700'],    'D': ['\u1d30', '\u2094'],    'E': ['\u1d31', '\u2091'],    'F': ['\u1da0', '\u0532'],    'G': ['\u1d33', '\u2089'],    'H': ['\u1d34', '\u2095'],    'I': ['\u1d35', '\u1d62'],    'J': ['\u1d36', '\u2c7c'],    'K': ['\u1d37', '\u2096'],    'L': ['\u1d38', '\u2097'],    'M': ['\u1d39', '\u2098'],    'N': ['\u1d3a', '\u2099'],    'O': ['\u1d3c', '\u2092'],    'P': ['\u1d3e', '\u209a'],    'Q': ['?', '?'],    'R': ['\u1d3f', '\u1d63'],    'S': ['\u02e2', '\u209b'],    'T': ['\u1d40', '\u209c'],    'U': ['\u1d41', '\u1d64'],    'V': ['\u2c7d', '\u1d65'],    'W': ['\u1d42', '\u1d65\u1d65'],    'X': ['\u02e3', '\u2093'],    'Y': ['\u02b8', '\u1d67'],    'Z': ['\u1dbb', '\u2082'],    '+': ['\u207A', '\u208A'],    '-': ['\u207B', '\u208B'],    '=': ['\u207C', '\u208C'],    '(': ['\u207D', '\u208D'],    ']': ['\u207E', '\u208E'],    ':alpha': ['\u1d45', '?'],    ':beta': ['\u1d5d', '\u1d66'],    ':gamma': ['\u1d5e', '\u1d67'],    ':delta': ['\u1d5f', '?'],    ':epsilon': ['\u1d4b', '?'],    ':theta': ['\u1dbf', '?'],    ':iota': ['\u1da5', '?'],    ':pho': ['?', '\u1d68'],    ':phi': ['\u1db2', '?'],    ':psi': ['\u1d60', '\u1d69'],    ':chi': ['\u1d61', '\u1d6a'],    ':coffee': ['\u2615', '\u2615']};
+Iterable<String> subsupcodekeys = subsupcode.keys.toList().reversed;
+const namedColors = {"AliceBlue": "#F0F8FF","AntiqueWhite": "#FAEBD7","Aqua": "#00FFFF","Aquamarine": "#7FFFD4","Azure": "#F0FFFF","Beige": "#F5F5DC","Bisque": "#FFE4C4","Black": "#000000","BlanchedAlmond": "#FFEBCD","Blue": "#0000FF","BlueViolet": "#8A2BE2","Brown": "#A52A2A","BurlyWood": "#DEB887","CadetBlue": "#5F9EA0","Chartreuse": "#7FFF00","Chocolate": "#D2691E","Coral": "#FF7F50","CornflowerBlue": "#6495ED","Cornsilk": "#FFF8DC","Crimson": "#DC143C","Cyan": "#00FFFF","DarkBlue": "#00008B","DarkCyan": "#008B8B","DarkGoldenRod": "#B8860B","DarkGray": "#A9A9A9","DarkGrey": "#A9A9A9","DarkGreen": "#006400","DarkKhaki": "#BDB76B","DarkMagenta": "#8B008B","DarkOliveGreen": "#556B2F","DarkOrange": "#FF8C00","DarkOrchid": "#9932CC","DarkRed": "#8B0000","DarkSalmon": "#E9967A","DarkSeaGreen": "#8FBC8F","DarkSlateBlue": "#483D8B","DarkSlateGray": "#2F4F4F","DarkSlateGrey": "#2F4F4F","DarkTurquoise": "#00CED1","DarkViolet": "#9400D3","DeepPink": "#FF1493","DeepSkyBlue": "#00BFFF","DimGray": "#696969","DimGrey": "#696969","DodgerBlue": "#1E90FF","FireBrick": "#B22222","FloralWhite": "#FFFAF0","ForestGreen": "#228B22","Fuchsia": "#FF00FF","Gainsboro": "#DCDCDC","GhostWhite": "#F8F8FF","Gold": "#FFD700","GoldenRod": "#DAA520","Gray": "#808080","Grey": "#808080","Green": "#008000","GreenYellow": "#ADFF2F","HoneyDew": "#F0FFF0","HotPink": "#FF69B4","IndianRed ": "#CD5C5C","Indigo ": "#4B0082","Ivory": "#FFFFF0","Khaki": "#F0E68C","Lavender": "#E6E6FA","LavenderBlush": "#FFF0F5","LawnGreen": "#7CFC00","LemonChiffon": "#FFFACD","LightBlue": "#ADD8E6","LightCoral": "#F08080","LightCyan": "#E0FFFF","LightGoldenRodYellow": "#FAFAD2","LightGray": "#D3D3D3","LightGrey": "#D3D3D3","LightGreen": "#90EE90","LightPink": "#FFB6C1","LightSalmon": "#FFA07A","LightSeaGreen": "#20B2AA","LightSkyBlue": "#87CEFA","LightSlateGray": "#778899","LightSlateGrey": "#778899","LightSteelBlue": "#B0C4DE","LightYellow": "#FFFFE0","Lime": "#00FF00","LimeGreen": "#32CD32","Linen": "#FAF0E6","Magenta": "#FF00FF","Maroon": "#800000","MediumAquaMarine": "#66CDAA","MediumBlue": "#0000CD","MediumOrchid": "#BA55D3","MediumPurple": "#9370DB","MediumSeaGreen": "#3CB371","MediumSlateBlue": "#7B68EE","MediumSpringGreen": "#00FA9A","MediumTurquoise": "#48D1CC","MediumVioletRed": "#C71585","MidnightBlue": "#191970","MintCream": "#F5FFFA","MistyRose": "#FFE4E1","Moccasin": "#FFE4B5","NavajoWhite": "#FFDEAD","Navy": "#000080","OldLace": "#FDF5E6","Olive": "#808000","OliveDrab": "#6B8E23","Orange": "#FFA500","OrangeRed": "#FF4500","Orchid": "#DA70D6","PaleGoldenRod": "#EEE8AA","PaleGreen": "#98FB98","PaleTurquoise": "#AFEEEE","PaleVioletRed": "#DB7093","PapayaWhip": "#FFEFD5","PeachPuff": "#FFDAB9","Peru": "#CD853F","Pink": "#FFC0CB","Plum": "#DDA0DD","PowderBlue": "#B0E0E6","Purple": "#800080","RebeccaPurple": "#663399","Red": "#FF0000","RosyBrown": "#BC8F8F","RoyalBlue": "#4169E1","SaddleBrown": "#8B4513","Salmon": "#FA8072","SandyBrown": "#F4A460","SeaGreen": "#2E8B57","SeaShell": "#FFF5EE","Sienna": "#A0522D","Silver": "#C0C0C0","SkyBlue": "#87CEEB","SlateBlue": "#6A5ACD","SlateGray": "#708090","SlateGrey": "#708090","Snow": "#FFFAFA","SpringGreen": "#00FF7F","SteelBlue": "#4682B4","Tan": "#D2B48C","Teal": "#008080","Thistle": "#D8BFD8","Tomato": "#FF6347","Turquoise": "#40E0D0","Violet": "#EE82EE","Wheat": "#F5DEB3","White": "#FFFFFF","WhiteSmoke": "#F5F5F5","Yellow": "#FFFF00","YellowGreen": "#9ACD32","aliceblue": "#f0f8ff","antiquewhite": "#faebd7","aqua": "#00ffff","aquamarine": "#7fffd4","azure": "#f0ffff","beige": "#f5f5dc","bisque": "#ffe4c4","black": "#000000","blanchedalmond": "#ffebcd","blue": "#0000ff","blueviolet": "#8a2be2","brown": "#a52a2a","burlywood": "#deb887","cadetblue": "#5f9ea0","chartreuse": "#7fff00","chocolate": "#d2691e","coral": "#ff7f50","cornflowerblue": "#6495ed","cornsilk": "#fff8dc","crimson": "#dc143c","cyan": "#00ffff","darkblue": "#00008b","darkcyan": "#008b8b","darkgoldenrod": "#b8860b","darkgray": "#a9a9a9","darkgrey": "#a9a9a9","darkgreen": "#006400","darkkhaki": "#bdb76b","darkmagenta": "#8b008b","darkolivegreen": "#556b2f","darkorange": "#ff8c00","darkorchid": "#9932cc","darkred": "#8b0000","darksalmon": "#e9967a","darkseagreen": "#8fbc8f","darkslateblue": "#483d8b","darkslategray": "#2f4f4f","darkslategrey": "#2f4f4f","darkturquoise": "#00ced1","darkviolet": "#9400d3","deeppink": "#ff1493","deepskyblue": "#00bfff","dimgray": "#696969","dimgrey": "#696969","dodgerblue": "#1e90ff","firebrick": "#b22222","floralwhite": "#fffaf0","forestgreen": "#228b22","fuchsia": "#ff00ff","gainsboro": "#dcdcdc","ghostwhite": "#f8f8ff","gold": "#ffd700","goldenrod": "#daa520","gray": "#808080","grey": "#808080","green": "#008000","greenyellow": "#adff2f","honeydew": "#f0fff0","hotpink": "#ff69b4","indianred ": "#cd5c5c","indigo ": "#4b0082","ivory": "#fffff0","khaki": "#f0e68c","lavender": "#e6e6fa","lavenderblush": "#fff0f5","lawngreen": "#7cfc00","lemonchiffon": "#fffacd","lightblue": "#add8e6","lightcoral": "#f08080","lightcyan": "#e0ffff","lightgoldenrodyellow": "#fafad2","lightgray": "#d3d3d3","lightgrey": "#d3d3d3","lightgreen": "#90ee90","lightpink": "#ffb6c1","lightsalmon": "#ffa07a","lightseagreen": "#20b2aa","lightskyblue": "#87cefa","lightslategray": "#778899","lightslategrey": "#778899","lightsteelblue": "#b0c4de","lightyellow": "#ffffe0","lime": "#00ff00","limegreen": "#32cd32","linen": "#faf0e6","magenta": "#ff00ff","maroon": "#800000","mediumaquamarine": "#66cdaa","mediumblue": "#0000cd","mediumorchid": "#ba55d3","mediumpurple": "#9370db","mediumseagreen": "#3cb371","mediumslateblue": "#7b68ee","mediumspringgreen": "#00fa9a","mediumturquoise": "#48d1cc","mediumvioletred": "#c71585","midnightblue": "#191970","mintcream": "#f5fffa","mistyrose": "#ffe4e1","moccasin": "#ffe4b5","navajowhite": "#ffdead","navy": "#000080","oldlace": "#fdf5e6","olive": "#808000","olivedrab": "#6b8e23","orange": "#ffa500","orangered": "#ff4500","orchid": "#da70d6","palegoldenrod": "#eee8aa","palegreen": "#98fb98","paleturquoise": "#afeeee","palevioletred": "#db7093","papayawhip": "#ffefd5","peachpuff": "#ffdab9","peru": "#cd853f","pink": "#ffc0cb","plum": "#dda0dd","powderblue": "#b0e0e6","purple": "#800080","rebeccapurple": "#663399","red": "#ff0000","rosybrown": "#bc8f8f","royalblue": "#4169e1","saddlebrown": "#8b4513","salmon": "#fa8072","sandybrown": "#f4a460","seagreen": "#2e8b57","seashell": "#fff5ee","sienna": "#a0522d","silver": "#c0c0c0","skyblue": "#87ceeb","slateblue": "#6a5acd","slategray": "#708090","slategrey": "#708090","snow": "#fffafa","springgreen": "#00ff7f","steelblue": "#4682b4","tan": "#d2b48c","teal": "#008080","thistle": "#d8bfd8","tomato": "#ff6347","turquoise": "#40e0d0","violet": "#ee82ee","wheat": "#f5deb3","white": "#ffffff","whitesmoke": "#f5f5f5","yellow": "#ffff00","yellowgreen": "#9acd32"};
+
 class LinkTextSpan extends TextSpan {
   // Beware!
   //
@@ -113,7 +117,7 @@ class BlockText extends StatelessWidget {
 }
 
 class ParseContext {
-  List<Widget> rootWidgetList; // the widgetList accumulator
+  List<dynamic> rootWidgetList; // the widgetList accumulator
   dynamic parentElement; // the parent spans accumulator
   int indentLevel = 0;
   int listCount = 0;
@@ -223,6 +227,7 @@ class HtmlRichTextParser extends StatelessWidget {
     "time",
     "span",
     "big",
+    "color"
   ];
 
   // specialty elements require unique handling
@@ -241,6 +246,8 @@ class HtmlRichTextParser extends StatelessWidget {
     "thead",
     "tr",
     "q",
+    "sub",
+    "sup"
   ];
 
   // block elements are always rendered with a new
@@ -456,7 +463,7 @@ class HtmlRichTextParser extends StatelessWidget {
           onLinkTap: onLinkTap,
         ));
 
-        // if the parent is a normal span, just add this to that list
+      } else if (parseContext.parentElement is List<TableRow>) {
       } else if (!(parseContext.parentElement.children is List<Widget>)) {
         parseContext.parentElement.children.add(span);
       } else {
@@ -475,9 +482,35 @@ class HtmlRichTextParser extends StatelessWidget {
       // pieces of it for the next iteration of this function
       ParseContext nextContext = new ParseContext.fromContext(parseContext);
 
+      TextStyle childStyle = parseContext.childStyle ?? TextStyle();
+
+      try {
+        if (node.attributes["style"] != null) {
+          node.attributes["style"].split(";").forEach((es) {
+            String name = es.split(":")[0].trim();
+            String value = es.split(":")[1].trim();
+            if (namedColors[value.toLowerCase()] != null) {
+              value = namedColors[value.toLowerCase()];
+            }
+            if ("color" == name) {
+              Color textColor = parseColor(value, null);
+              childStyle = childStyle.merge(TextStyle(color: textColor));
+              nextContext.childStyle = childStyle;
+            } else if ("background" == name) {
+              Color textColor = parseColor(value, null);
+              childStyle = childStyle.merge(TextStyle(backgroundColor: textColor));
+              nextContext.childStyle = childStyle;
+            }
+
+          });
+        }
+      } catch (e1) {
+        // ignoring exception
+      }
+
       // handle style elements
       if (_supportedStyleElements.contains(node.localName)) {
-        TextStyle childStyle = parseContext.childStyle ?? TextStyle();
+
 
         switch (node.localName) {
           //"b","i","em","strong","code","u","small","abbr","acronym"
@@ -544,6 +577,12 @@ class HtmlRichTextParser extends StatelessWidget {
             nextContext.indentLevel += 1;
             nextContext.blockType = 'blockquote';
             break;
+          case "color":
+            String colorStr = node.attributes["color"];
+            Color color = Colors.black;
+            color = parseColor(colorStr, color);
+            childStyle = childStyle.merge(TextStyle(color: color));
+            break;
           case "ruby":
           case "rt":
           case "rp":
@@ -570,6 +609,44 @@ class HtmlRichTextParser extends StatelessWidget {
         // should support "a","br","table","tbody","thead","tfoot","th","tr","td"
 
         switch (node.localName) {
+          case "sub":
+          case "sup":
+            TextStyle parentStyle = parseContext.childStyle.merge(TextStyle(fontSize: parseContext.childStyle.fontSize));
+
+            String nodeText = node.text.trim();
+            StringBuffer newText = StringBuffer();
+            List<String> keysList = subsupcodekeys.toList();
+            int index = 0;
+            while(nodeText.length > 0 ) {
+              if (nodeText.trim().length == 0) {
+                break;
+              }
+              subsupcodekeys.forEach((s) {
+
+                try {
+                  if (nodeText.length > 0) {
+                    if (nodeText.indexOf(s) == 0) {
+                      newText.write(node.localName == "sup"
+                          ? subsupcode[s][0]
+                          : subsupcode[s][1]);
+                      nodeText = nodeText.substring(s.length);
+                    }
+                  }
+                } catch(err) {
+
+                }
+              });
+              if (nodeText.length > 0) {
+                if (subsupcode[nodeText.substring(0, 1)] == null) {
+                  nodeText = nodeText.substring(1);
+                }
+              }
+            }
+            node.text = ""; // modify to render no child
+
+            TextSpan text = TextSpan(text: newText.toString(), children: <TextSpan>[], style: parentStyle);
+            nextContext.parentElement.children.add(text);
+            break;
           case "a":
             // if this item has block children, we create
             // a container and gesture recognizer for the entire
@@ -622,18 +699,32 @@ class HtmlRichTextParser extends StatelessWidget {
           case "table":
             // new block, so clear out the parent element
             parseContext.parentElement = null;
-            nextContext.parentElement = Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[],
-            );
+            nextContext.parentElement = <TableRow>[];
             double border = 0;
             if (node.attributes['border'] != null) {
-              border = node.attributes['border'] as double;
+              border = double.parse(node.attributes['border']);
             }
-            nextContext.rootWidgetList.add(Container(
-                decoration: BoxDecoration(border: Border.all(width: border)),
-                margin: EdgeInsets.symmetric(vertical: 12.0),
-                child: nextContext.parentElement));
+
+            if(node.nodes.length > 0 && (node.nodes[0] is dom.Element) && (node.nodes[0] as dom.Element).localName == "caption") {
+              String caption = node.nodes[0].children[0].text;
+              node.nodes[0].children[0].text = "";
+              nextContext.rootWidgetList.add(
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: Text(caption, style: TextStyle(fontWeight: FontWeight.bold),),
+                )
+              );
+            }
+
+            nextContext.rootWidgetList.add(
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Table(
+                  border: border > 0 ? TableBorder.all(width: border) : null,
+                  children: nextContext.parentElement,
+                )
+              )
+            );
             break;
 
           // we don't handle tbody, thead, or tfoot elements separately for now
@@ -649,51 +740,43 @@ class HtmlRichTextParser extends StatelessWidget {
             if (node.attributes['colspan'] != null) {
               colspan = int.tryParse(node.attributes['colspan']);
             }
+
             if (node.parent.parent.attributes['border'] != null || node.parent.parent.parent.attributes['border'] != null ) {
-              border = (node.parent.parent.attributes['border']?? node.parent.parent.parent.attributes['border']) as double;
+              border = double.parse(node.parent.parent.attributes['border']?? node.parent.parent.parent.attributes['border']);
             }
             nextContext.childStyle = nextContext.childStyle.merge(TextStyle(
                 fontWeight: (node.localName == 'th')
                     ? FontWeight.bold
                     : FontWeight.normal));
+
+            if (node.localName == "th") {
+              print("Bg Color is ${nextContext.childStyle.backgroundColor}");
+            }
             RichText text =
-                RichText(text: TextSpan(text: '', children: <TextSpan>[]));
-            Expanded cell = Expanded(
-              flex: colspan,
-              child: Container(decoration: BoxDecoration(border: Border.all(width: border)), padding: EdgeInsets.all(1.0), child: text),
-            );
+                RichText(text: TextSpan(text: '', children: <TextSpan>[], style: nextContext.childStyle));
+//            Expanded cell = Expanded(
+//              flex: colspan,
+//              child: Container(padding: EdgeInsets.all(1.0), child: text),
+//            );
+            TableCell cell = TableCell(child: Padding(padding: EdgeInsets.all(2), child: text));
             nextContext.parentElement.children.add(cell);
             nextContext.parentElement = text.text;
             break;
 
           case "tr":
-            Row row = Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[],
+
+            TableRow row = TableRow(
+              children: <Widget>[]
             );
-            nextContext.parentElement.children.add(row);
+            nextContext.parentElement.add(row);
             nextContext.parentElement = row;
             break;
 
           // treat captions like a row with one expanded cell
           case "caption":
             // create the row
-            Row row = Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[],
-            );
-
             // create an expanded cell
-            RichText text = RichText(
-                textAlign: TextAlign.center,
-                textScaleFactor: 1.2,
-                text: TextSpan(text: '', children: <TextSpan>[]));
-            Expanded cell = Expanded(
-              child: Container(padding: EdgeInsets.all(2.0), child: text),
-            );
-            row.children.add(cell);
-            nextContext.parentElement.children.add(row);
-            nextContext.parentElement = text.text;
+
             break;
           case "q":
             if (parseContext.parentElement != null &&
@@ -996,5 +1079,16 @@ class HtmlRichTextParser extends StatelessWidget {
       }
     }
     return false;
+  }
+
+  Color parseColor (String colorStr, Color color) {
+    if (colorStr.startsWith("#")) {
+      if (colorStr.length == 7) {
+        color = Color(int.parse("ff${colorStr.substring(1)}", radix: 16));
+      } else if (colorStr.length == 9) {
+        color = Color(int.parse("${colorStr.substring(1)}", radix: 16));
+      }
+    }
+    return color;
   }
 }

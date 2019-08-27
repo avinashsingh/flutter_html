@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:flutter_html/rich_text_parser.dart';
+import 'rich_text_parser.dart';
 
 import 'image_properties.dart';
 import 'package:flutter/gestures.dart';
